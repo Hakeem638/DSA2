@@ -94,6 +94,11 @@ class Leetcode {
               .max()
               .getAsInt();
   }
+
+
+  // 1846. Maximum Element After Decreasing and Rearranging
+  // after making making research on how to make it correct and optimised, came up with this solution 
+  
     
 
 }
