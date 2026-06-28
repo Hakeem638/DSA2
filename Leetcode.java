@@ -98,7 +98,26 @@ class Leetcode {
 
   // 1846. Maximum Element After Decreasing and Rearranging
   // after making making research on how to make it correct and optimised, came up with this solution 
-  
-    
 
+
+
+
+  public static int maximumElementAfterDecrementingAndRearrangingOptimal(int[] arr) {
+    // 1. Sort the array to get the optimal rearrangement
+    Arrays.sort(arr);
+
+    // 2. The first element must always be 1
+    arr[0] = 1;
+
+    // 3. Iterate through and ensure no adjacent element grows by more than 1
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i] - arr[i - 1] > 1) {
+            arr[i] = arr[i - 1] + 1; // Decrement it to the maximum allowed value
+        }
+    }
+
+    // 4. After sorting and capping, the last element is guaranteed to be the max
+    return arr[arr.length - 1];
+  }
 }
+    
