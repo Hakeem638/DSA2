@@ -1,3 +1,5 @@
+// Below is an implementation of a stack using a linked list instead of an array 
+
 public class LinkedStack {
   private static class Node {
     int value;
