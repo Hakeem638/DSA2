@@ -12,8 +12,15 @@ public class LinkedStack {
 
   private Node top;
 
+  private int size = 0;
+
+  public int size() {
+      return size;
+  }
+
   public void push(int value) {
     top = new Node(value, top);
+    size++;
   }
 
   public int pop() {
@@ -22,6 +29,7 @@ public class LinkedStack {
     }
     int item = top.value;
     top = top.next;
+    size--;
     return item;
   }
 
